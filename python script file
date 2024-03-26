@@ -1,0 +1,4 @@
+Integrating expense input, budget setting, and report generation functionalities.
+Expense input class: class implementing methods for inputting expenses (add_expenses()). 
+Budget setting class: class for setting and managing monthly budgets. 
+Report generation class: class will contain methods for generating reports that summarizes expenses and spending habits.
