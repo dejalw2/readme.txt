@@ -1,4 +1,9 @@
 Detailed explanation of the extensive functionalities of my personal finance tracker (EFL) 
-Expense input: users will be able to input their expenses, the date, the amount, store and category.
-Budget setting: user will set monthly budgets for different expense categories. 
+Expense input: users will be able to input their expenses, the date, the amount, store (name of store or vendor) and category (groceries, entertainment, travel).
+  - format for the date (yyyy-mm-dd). 
+Budget setting: users will set monthly budgets for different expense categories. 
+  - set_budget(category,amount). 
+  - category (str) the name of the expense category. 
+  - amount (float) the monthly budget amount a specific category. 
 Report: reports will be generated explaining expenses and total spending. 
+  - generate_report(). 
