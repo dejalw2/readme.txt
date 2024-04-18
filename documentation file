@@ -4,6 +4,7 @@ Expense input: users will be able to input their expenses, the date, the amount,
 Budget setting: users will set monthly budgets for different expense categories. 
   - set_budget(category,amount). 
   - category (str) the name of the expense category. 
+    - utilities, insurance, transportation, restaurants, subscriptions, clothing, travel, shoes etc.
   - amount (float) the monthly budget amount a specific category. 
 Report: reports will be generated explaining expenses and total spending. 
   - generate_report(). 
