@@ -6,19 +6,8 @@ Since my youth, I've harbored a keen interest in savings and entrepreneurship. A
 
 To utilize this code, execute the following command:
 
-```bash
-python3.11 wooten_deja_finalproject.py
+  python3.11 wooten_deja_finalproject.py
 
 # Code Design
 
 I split the main ideas into 3 classes: ExpenseInput to handle all expenses, BudgetSetting to store the budget information, and ReportGeneration for conclusions.
-
-
-
-Three Functions: expense input, budget setting, and report generation. 
-
-Expense Input Function: input expenses (date, amount, store, category)
-
-Budget Setting Function: set monthly budgets for each category (potential categories: groceries, entertainment, travel, etc.) 
-
-Report Generation Function: reports will be generated summing up expenses, total spending etc
