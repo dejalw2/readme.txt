@@ -81,11 +81,11 @@ class ReportGeneration:
             print("Category: {}, Budget: ${:.2f}, Spent: ${:.2f}".format(category, budget, total_spent_category))
 
         return total_spent
-        
+
     def plot_expense_trends(self):
         dates = [expense['date'] for expense in self.expense_input.expenses]
         amounts = [expense['amount']for expense in self.expense_input.expenses]
-        dates = [datetime.strptime(date,'%Y-%m-%d')for date in dates]
+        dates = [datetime.strptime(date.strip(),'%Y-%m-%d') for date in dates]
 
         for category, budget in self.budget_setting.budgets.items():
             total_spent_category = sum(expense['amount'] for expense in self.expense_input.expenses if expense['category'] == category)
@@ -127,6 +127,7 @@ if __name__ == "__main__":
     #print them nicely
     table = PrettyTable()
     table.add_column("Possible Categories", category) #creating table for categories 
+    print("Add extensive amount of data regrading spending habits and budget setting for the best results.")
     print(table)
 
     #setup all the needed objects
