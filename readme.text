@@ -1,4 +1,4 @@
-##Description: 
+## Description: 
 from a very young age I've always been interested in saving, and having multiple businesses, as I have gotten older I've developed an interest in real estate, savings (Roth IRA, High Yield Savings), and financial literacy. That being said my project will focus on developing a personal finance tracker using Python this will allow you to input your expenses, categorize them, set budgets, and even generate reports to analyze spending habits, similar to banking apps. 
 
 Three Functions: expense input, budget setting, and report generation. 
