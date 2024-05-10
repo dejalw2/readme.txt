@@ -1,5 +1,20 @@
-## Description: 
-from a very young age I've always been interested in saving, and having multiple businesses, as I have gotten older I've developed an interest in real estate, savings (Roth IRA, High Yield Savings), and financial literacy. That being said my project will focus on developing a personal finance tracker using Python this will allow you to input your expenses, categorize them, set budgets, and even generate reports to analyze spending habits, similar to banking apps. 
+# Description
+
+From a very young age I've always been interested in saving, and having multiple businesses, as I have gotten older I've developed an interest in real estate, savings (Roth IRA, High Yield Savings), and financial literacy. That being said my project will focus on developing a personal finance tracker using Python this will allow you to input your expenses, categorize them, set budgets, and even generate reports to analyze spending habits, similar to banking apps. 
+
+# Usage
+
+To use this code run the following:
+
+  python3.11 wooten_deja_finalproject.py
+
+Once run, it will prompt you to enter expenses and a supposed budget. Once you enter the numbers, the code will calculate certain metrics and visualize these.
+
+# Code Design
+
+I split the main ideas into 3 classes: ExpenseInput to handle all expenses, BudgetSetting to store the budget information, and ReportGeneration for conclusions.
+
+
 
 Three Functions: expense input, budget setting, and report generation. 
 
