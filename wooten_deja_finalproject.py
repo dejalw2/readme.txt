@@ -80,6 +80,8 @@ class ReportGeneration:
             total_spent_category = sum(expense['amount'] for expense in self.expense_input.expenses if expense['category'] == category)
             print("Category: {}, Budget: ${:.2f}, Spent: ${:.2f}".format(category, budget, total_spent_category))
 
+        return total_spent
+        
     def plot_expense_trends(self):
         dates = [expense['date'] for expense in self.expense_input.expenses]
         amounts = [expense['amount']for expense in self.expense_input.expenses]
@@ -102,67 +104,68 @@ class ReportGeneration:
         plt.show()
 
 
-#Now in the main class
+if __name__ == "__main__":
+    #Now in the main class
 
-#lets setup a function to input all the expenses
-def input_expense():
-    date = input("Enter date (yyyy-mm-dd): ")
-    amount = float(input("Enter amount spent: "))
-    store = input("Enter store name: ")
-    category = input("Enter expense category: ")
-    return date, amount, store, category
+    #lets setup a function to input all the expenses
+    def input_expense():
+        date = input("Enter date (yyyy-mm-dd): ")
+        amount = float(input("Enter amount spent: "))
+        store = input("Enter store name: ")
+        category = input("Enter expense category: ")
+        return date, amount, store, category
 
-#lets do the same for budget
-def input_budget()
-    category = input("Enter expense category: ")
-    amount = float(input("Enter monthly budget for this category: "))
-    return category, amount
+    #lets do the same for budget
+    def input_budget():
+        category = input("Enter expense category: ")
+        amount = float(input("Enter monthly budget for this category: "))
+        return category, amount
 
-#now initialize the potential categories
-category = ["travel", "monthly subscriptions", "apparel", "bills", "restaurants", "transportation"] #defining possible category 
+    #now initialize the potential categories
+    category = ["travel", "monthly subscriptions", "apparel", "bills", "restaurants", "transportation"] #defining possible category 
 
-#print them nicely
-table = PrettyTable()
-table.add_column("Possible Categories", category) #creating table for categories 
-print(table)
+    #print them nicely
+    table = PrettyTable()
+    table.add_column("Possible Categories", category) #creating table for categories 
+    print(table)
 
-#setup all the needed objects
-expense_input = ExpenseInput()
-budget_setting = BudgetSetting()
-report_generation = ReportGeneration(expense_input, budget_setting)
+    #setup all the needed objects
+    expense_input = ExpenseInput()
+    budget_setting = BudgetSetting()
+    report_generation = ReportGeneration(expense_input, budget_setting)
 
-#now actually prompt the user using the methods we just definied
-while True:
-    add_expense = input("Do you want to add an expense? (yes/no): ")
-    if add_expense.lower() != 'yes':
-        break
-    date, amount, store, category = input_expense()
-    expense_input.add_expense(date, amount, store, category)
+    #now actually prompt the user using the methods we just definied
+    while True:
+        add_expense = input("Do you want to add an expense? (yes/no): ")
+        if add_expense.lower() != 'yes':
+            break
+        date, amount, store, category = input_expense()
+        expense_input.add_expense(date, amount, store, category)
 
-#do the same with budgets
-while True:
-    add_budget = input("Do you want to set a budget? (yes/no): ")
-    if add_budget.lower() != 'yes':
-        break
-    category, amount = input_budget()
-    budget_setting.set_budget(category, amount)
-
-
-#finally generate all the reports
-report_generation.generate_report()
-report_generation.generate_report()
-report_generation.plot_expense_trends()
+    #do the same with budgets
+    while True:
+        add_budget = input("Do you want to set a budget? (yes/no): ")
+        if add_budget.lower() != 'yes':
+            break
+        category, amount = input_budget()
+        budget_setting.set_budget(category, amount)
 
 
-##IGNORE AFTER HERE:
-"""
-#reminder_system = ReminderSystem(expense_input)
+    #finally generate all the reports
+    report_generation.generate_report()
+    report_generation.generate_report()
+    report_generation.plot_expense_trends()
 
 
-class ReminderSystem: 
-    def __init__ (self,expense_input):
-        self.expense_input = expense_input 
-    def check_due_dates(self):#check due dates of bills and send reminders
-        pass
-reminder_system.check_due_dates()
+    ##IGNORE AFTER HERE:
+    """
+    #reminder_system = ReminderSystem(expense_input)
 
+
+    class ReminderSystem: 
+        def __init__ (self,expense_input):
+            self.expense_input = expense_input 
+        def check_due_dates(self):#check due dates of bills and send reminders
+            pass
+    reminder_system.check_due_dates()
+    """
