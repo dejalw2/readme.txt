@@ -12,3 +12,13 @@ To utilize this code, execute the following command:
 # Code Design
 
 I split the main ideas into 3 classes: ExpenseInput to handle all expenses, BudgetSetting to store the budget information, and ReportGeneration for conclusions.
+
+# Favorite functions
+
+Three Functions: expense input, budget setting, and report generation. 
+
+Expense Input Function: inputs expenses (date, amount, store, category)
+
+Budget Setting Function: sets monthly budgets for each category (i.e: groceries, entertainment, travel, etc.) 
+
+Report Generation Function: reports will be generated summing up expenses, total spending etc
